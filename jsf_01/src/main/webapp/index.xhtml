@@ -14,18 +14,24 @@
 		
 		<h:form>
 			<h:panelGrid columns="2" cellpadding="5" styleClass="bottom-space">
-				<p:outputLabel for="idx" value="amount:" />
-				<p:inputText id="idx" value="#{calcBB.amount}" />
+				<p:outputLabel for="idx" value="Kwota:" />
+				<p:inputText id="idx" value="#{calcBB.amount}" required="true"
+					requiredMessage="Kwota: Pole puste"
+					converterMessage="Kwota: Konwersja pomyślna"/>
 
-				<p:outputLabel for="idy" value="length:" />
-				<p:inputText id="idy" value="#{calcBB.length}" />
+				<p:outputLabel for="idy" value="Okres:" />
+				<p:inputText id="idy" value="#{calcBB.length}" required="true"
+					placeholder="ilość miesięcy"
+					requiredMessage="Okres: Pole puste"
+					converterMessage="Okres: Konwersja pomyślna"/>
 
-				<p:outputLabel for="idz" value="percentage:" />
-				<p:inputText id="idz" value="#{calcBB.perc}" />
+				<p:outputLabel for="idz" value="Oprocentowanie:" />
+				<p:inputText id="idz" value="#{calcBB.perc}" required="true"
+					requiredMessage="Oprocentowanie: Pole puste"
+					converterMessage="Oprocentowanie: Konwersja pomyślna"/>
 
 				<p:commandButton value="Oblicz ratę miesięczną" action="#{calcBB.calc()}" update="msg" />
 			</h:panelGrid>
-			<p:commandLink value="Informacje" action="#{calcBB.info()}" />
 		</h:form>
 
 	
