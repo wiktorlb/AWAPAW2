@@ -42,7 +42,7 @@ public class UserDAO {
 	public List<User> getFullList() {
 		List<User> list = null;
 
-		Query query = em.createQuery("select u from User u");
+		Query query = em.createQuery("select u from user u");
 
 		try {
 			list = query.getResultList();
@@ -60,7 +60,7 @@ public class UserDAO {
 		String select = "select u ";
 		String from = "from user u ";
 		String where = "";
-		String orderby = "order by u.last_name asc, u.name";
+		String orderby = "order by u.lastName asc, u.name";
 
 		// search for surname
 		String lastName = (String) searchParams.get("lastName");

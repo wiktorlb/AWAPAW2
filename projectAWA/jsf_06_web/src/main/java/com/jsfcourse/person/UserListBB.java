@@ -35,10 +35,6 @@ public class UserListBB {
 	@EJB
 	UserDAO userDAO;
 
-	/*
-	 * public String getSurname() { return surname; }
-	 */
-
 	
 	public String getLastName() { 
 		return this.lastName; 
@@ -64,11 +60,13 @@ public class UserListBB {
 		}
 
 		// 2. Get list
-		list = userDAO.getList(searchParams);
+		//list = userDAO.getList(searchParams);
+		
+		list = userDAO.getFullList();
 
 		return list;
 	}
-	  public String newPerson(){ Person person = new Person();
+	  public String newUser(){ User user = new User();
 	  
 	  //1. Pass object through session //HttpSession session = (HttpSession)
 	  extcontext.getSession(true); //session.setAttribute("person", person);
@@ -77,7 +75,7 @@ public class UserListBB {
 	  
 	  return PAGE_PERSON_EDIT; }
 	  
-	  public String editPerson(Person person){ //1. Pass object through session
+	  public String editPerson(User user){ //1. Pass object through session
 	  //HttpSession session = (HttpSession) extcontext.getSession(true);
 	  //session.setAttribute("person", person);
 	  

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<meta charset="utf-8" />
+	<title>JSF 06 - EJB, bazy danych (mapowanie
+		obiektowo-relacyjne)</title>
+</h:head>
+<h:body style="background-color: #eee; margin: 0.5em;">
+ 
+	<h:form id="loginForm">
+		<p:panel id="loginPnl" header="Login"
+			style="width: 350px; margin: 0 auto;">
+			<h:panelGrid id="loginPanel" columns="2" cellpadding="5">
+				<h:outputText value="Username" />
+				<p:inputText id="username" value="#"></p:inputText>
+				<p:spacer /><p:spacer />	
+				<h:outputText value="Password" />
+				<p:password id="password" value="#"
+					feedback="false"></p:password>
+				<p:message for="password"></p:message>
+			</h:panelGrid>
+			<h:panelGrid columns="1" cellpadding="10" width="100%">
+				<p:commandButton id="loginButton" action="#"
+					value="Login" update="loginForm" ajax="true" style="float: right;">
+				</p:commandButton>
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+	
+ 	<p:messages />
+ 	
+</h:body>
+</html>

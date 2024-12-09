@@ -19,7 +19,7 @@
 			<h:panelGrid columns="2" cellpadding="5">
 				<h:outputLabel value="nazwisko:" />
 				<p:inputText value="#{UserListBB.lastName}" />
-				<p:commandButton value="Szukaj" /> <!-- update="form-table"  -->
+				<p:commandButton value="Szukaj" update="form-table"/>
 			</h:panelGrid>
 		</h:form>
 	</p:panel>
@@ -27,9 +27,6 @@
 	<p:messages />
 
 	<h:form id="form-table" style="margin-bottom:1em;">
-
-		<p:commandButton value="Dodaj nową osobę"
-			action="#{personListBB.newPerson()}" style="margin-bottom:1em;" />
 
 		<p:dataTable value="#{UserListBB.list}" var="u">
 
@@ -40,15 +37,15 @@
 				<h:outputText value="#{u.name}" />
 			</p:column>
 
-			<p:column>
+			<!-- <p:column>
 				<f:facet name="header">
 					<h:outputText value="nazwisko" />
 				</f:facet>
 				<h:outputText value="#{u.lastName}" />
-			</p:column>
+			</p:column> -->
 
 
-			<p:column>
+			<!-- <p:column>
 				<f:facet name="header">
 					<h:outputText value="opcje" />
 				</f:facet>
@@ -58,7 +55,7 @@
 
 				<p:commandButton value="Usuń"
 					action="#{personListBB.deletePerson(p)}" update="@form" />
-			</p:column>
+			</p:column> -->
 
 		</p:dataTable>
 	</h:form>
