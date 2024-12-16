@@ -1,0 +1,6 @@
+com\jsf\entities\Request.class
+com\jsf\entities\Team.class
+com\jsf\entities\User.class
+com\jsf\user\UserListBB.class
+com\jsf\dao\UserDAO.class
+com\jsf\entities\Role.class
